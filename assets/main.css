@@ -1,0 +1,31 @@
+/* Dark Modern Dashboard base styles */
+:root{--bg:#06070b;--surface:#081226;--muted:#94a3b8;--text:#e6eef8;--accent:#7c5cff;--accent-2:#2dd4bf}
+*{box-sizing:border-box}
+html,body,#root{height:100%}
+body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--text)}
+.app{display:flex;min-height:100vh}
+.sidebar{width:260px;background:linear-gradient(180deg,var(--surface),#0b1220);padding:20px;display:flex;flex-direction:column}
+.brand{display:flex;align-items:center;gap:12px;margin-bottom:18px}
+.brand .logo{width:44px}
+.brand-name{font-weight:700}
+.menu{display:flex;flex-direction:column;gap:8px}
+.menu a{color:var(--muted);padding:10px 12px;border-radius:8px;text-decoration:none}
+.menu a.active{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:white}
+.menu a:hover{color:white}
+.sidebar-footer{margin-top:auto;color:var(--muted);font-size:13px}
+.main{flex:1;display:flex;flex-direction:column}
+.topbar{display:flex;justify-content:space-between;align-items:center;padding:18px 24px;border-bottom:1px solid rgba(255,255,255,0.03)}
+.search input{background:transparent;border:1px solid rgba(255,255,255,0.04);padding:8px 10px;border-radius:8px;color:var(--text)}
+.hero{padding:28px 24px}
+.hero h1{margin:0 0 6px}
+.muted{color:var(--muted)}
+.kpis{display:flex;gap:16px;margin-top:14px}
+.kpi{background:linear-gradient(180deg,#071226,#0b1220);padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,0.03)}
+.kpi-value{font-weight:700;font-size:1.3rem}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;padding:18px}
+.card{background:linear-gradient(180deg,#071023,#081226);border-radius:12px;padding:16px;border:1px solid rgba(255,255,255,0.04)}
+.card.full{grid-column:span 2}
+.table{width:100%;border-collapse:collapse;color:var(--text)}
+.table th, .table td{padding:8px;border-bottom:1px solid rgba(255,255,255,0.03)}
+.site-footer{padding:18px;color:var(--muted);border-top:1px solid rgba(255,255,255,0.03)}
+@media (max-width:900px){.sidebar{width:80px}.menu a span{display:none}.grid{grid-template-columns:1fr}}
