@@ -1,83 +1,83 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="tr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
-    <title>DSB GLOBAL - Driver Performance Dashboard</title>
-    <meta name="description" content="Track and monitor Amazon DSB GLOBAL driver performance metrics including DNR, POD, CC, and packages delivered. View daily, monthly, and quarterly reports." />
-    <meta property="og:title" content="DSB GLOBAL - Driver Performance Dashboard" />
-    <meta property="og:description" content="Comprehensive driver performance tracking for Amazon DSB GLOBAL delivery services." />
-    <link rel="icon" type="image/png" href="assets/favicon.png" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Fira+Code:wght@300..700&family=Geist+Mono:wght@100..900&family=Geist:wght@100..900&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400..700;1,400..700&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@100..900&family=Oxanium:wght@200..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&family=Space+Grotesk:wght@300..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-    <script type="module" crossorigin src="assets/index-D55UrUwm.js"></script>
-    <link rel="stylesheet" crossorigin href="assets/index-D7U5_wHI.css">
-    <link rel="stylesheet" href="assets/override.css">
-  </head>
-  <body>
-    <header class="site-header">
-      <div class="container header-inner">
-        <a class="brand" href="/">
-          <img src="assets/logo.svg" alt="DSB GLOBAL logo" class="logo"> DSB GLOBAL
-        </a>
-        <nav class="nav">
-          <a href="#">Ana Sayfa</a>
-          <a href="#about">Hakkında</a>
-          <a href="#contact">İletişim</a>
-        </nav>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>DSB GLOBAL — Dashboard</title>
+  <meta name="description" content="DSB GLOBAL — Driver performance dashboard" />
+  <link rel="icon" href="assets/favicon.png" />
+  <link rel="stylesheet" href="assets/main.css">
+  <script defer src="assets/app.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script defer src="assets/charts.js"></script>
+</head>
+<body class="dark">
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand">
+        <img src="assets/logo-dark.svg" alt="DSB" class="logo">
+        <span class="brand-name">DSB GLOBAL</span>
       </div>
-    </header>
+      <nav class="menu">
+        <a href="index.html" class="active">Dashboard</a>
+        <a href="drivers.html">Sürücüler</a>
+        <a href="performance.html">Performans</a>
+        <a href="scorecard.html">Haftalık ScoreCard</a>
+        <a href="rankings.html">Sıralama</a>
+        <a href="trend.html">Trend Analizi</a>
+        <a href="calendar.html">Takvim</a>
+        <a href="import.html">Veri Import</a>
+      </nav>
+      <div class="sidebar-footer">v1.0</div>
+    </aside>
 
-    <main>
+    <main class="main">
+      <header class="topbar">
+        <div class="search"><input placeholder="Sürücü ara..." /></div>
+        <div class="actions"><button id="themeToggle">Tema</button></div>
+      </header>
+
       <section class="hero">
-        <div class="container hero-inner">
-          <div class="hero-text">
-            <span class="eyebrow">DSB GLOBAL</span>
-            <h1>Kurye performansınız için net ve anlık içgörüler</h1>
-            <p class="lead">DNR, POD, CC ve teslimat istatistiklerini tek bir pencerede takip edin. Hızlı, güvenilir ve mobil uyumlu dashboard.</p>
-            <p class="hero-cta"><a class="btn primary" href="#about">Hemen İncele</a> <a class="btn outline" href="#contact">İletişime Geç</a></p>
-            <ul class="features">
-              <li>Gerçek zamanlı raporlar</li>
-              <li>Mobil uyumlu arayüz</li>
-              <li>Kolay entegrasyon</li>
-            </ul>
+        <div class="hero-inner">
+          <div>
+            <h1>Genel Bakış</h1>
+            <p class="muted">Anlık metrikler ve son durum</p>
+            <div class="kpis">
+              <div class="kpi"><div class="kpi-value">98.2%</div><div class="kpi-label">Teslimat Başarısı</div></div>
+              <div class="kpi"><div class="kpi-value">12</div><div class="kpi-label">Toplam Geciken</div></div>
+              <div class="kpi"><div class="kpi-value">34</div><div class="kpi-label">İkaz / CC</div></div>
+            </div>
           </div>
-          <div class="hero-visual">
-            <img src="assets/hero-mock-dark.svg" alt="Dashboard preview" />
+          <div class="hero-chart">
+            <canvas id="overviewChart" width="600" height="300"></canvas>
           </div>
         </div>
       </section>
 
-      <section class="container cards-grid">
-        <div class="card">
-          <h3>Hızlı Performans Takibi</h3>
-          <p>Anlık metrikler, sürücü bazlı performans değerlendirmesi.</p>
-        </div>
-        <div class="card">
+      <section class="grid">
+        <article class="card">
           <h3>Haftalık ScoreCard</h3>
-          <p>Haftalık performans özetleri ve trend analizi.</p>
-        </div>
-        <div class="card">
-          <h3>Kolay İhracat</h3>
-          <p>CSV / Excel ile hızlı veri dışa aktarma desteklenir.</p>
-        </div>
+          <canvas id="scoreChart" width="400" height="180"></canvas>
+        </article>
+        <article class="card">
+          <h3>Trendler</h3>
+          <canvas id="trendChart" width="400" height="180"></canvas>
+        </article>
+        <article class="card full">
+          <h3>Sürücüler (Örnek Liste)</h3>
+          <table class="table">
+            <thead><tr><th>İsim</th><th>Teslimat</th><th>Puan</th></tr></thead>
+            <tbody>
+              <tr><td>Ahmet Y.</td><td>120</td><td>92</td></tr>
+              <tr><td>Mehmet K.</td><td>98</td><td>88</td></tr>
+              <tr><td>Fatma S.</td><td>112</td><td>95</td></tr>
+            </tbody>
+          </table>
+        </article>
       </section>
 
-      <div id="root" class="container"></div>
-
-      <section id="about" class="section container">
-        <h2>Hakkında</h2>
-        <p>DSB GLOBAL sürücü performans panelinin örnek içeriği. Buraya kısa bir giriş ve hizmet açıklaması ekleyebilirsiniz.</p>
-      </section>
-
-      <section id="contact" class="section container">
-        <h2>İletişim</h2>
-        <p>İletişim: <a href="mailto:info@dsb-global.example">info@dsb-global.example</a></p>
-      </section>
+      <footer class="site-footer">© DSB GLOBAL</footer>
     </main>
-    <footer class="site-footer">
-      <div class="container">İletişim: <a href="mailto:info@dsb-global.example">info@dsb-global.example</a> — © DSB GLOBAL</div>
-    </footer>
-  </body>
+  </div>
+</body>
 </html>
