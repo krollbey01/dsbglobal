@@ -1,0 +1,37 @@
+/* Small responsive & usability overrides for mobile */
+:root{--container-max-width:1100px;--container-padding:16px}
+html,body{height:100%}
+body{font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;background:#fff;color:#0b2239;-webkit-font-smoothing:antialiased}
+.container{max-width:var(--container-max-width);margin:0 auto;padding:24px}
+#root{padding:16px}
+img,svg,video{max-width:100%;height:auto;display:block}
+/* Improve tap targets and spacing on small screens */
+a,button{min-height:44px;line-height:1.25;-webkit-tap-highlight-color:transparent}
+button{padding:10px 14px;border-radius:10px}
+/* Navigation wrap on small screens */
+.nav{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+/* Improve hero spacing for narrow viewports */
+@media (max-width:640px){
+  .hero{padding:40px 0}
+  .hero h2{font-size:1.35rem}
+  .hero p{font-size:0.95rem}
+  .container{padding:16px}
+}
+/* Slightly larger type for readability on phones */
+@media (max-width:420px){
+  body{font-size:15px}
+  .brand{font-size:1rem}
+}
+/* Utility: readable lists/cards on small screens */
+.section{word-wrap:break-word}
+
+/* Header / Footer styles */
+.site-header{background:#fff;border-bottom:1px solid #eef2f7;position:sticky;top:0;z-index:60}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:10px 16px}
+.brand{display:inline-flex;gap:10px;align-items:center;font-weight:600;color:#0b2239;text-decoration:none}
+.brand .logo{width:120px;height:auto}
+.site-footer{padding:14px 0;text-align:center;color:#475569;background:transparent;border-top:1px solid #eef2f7}
+
+/* Accent color tweak */
+:root{--accent:#0b6efd}
+.btn, .brand, .nav a{color:var(--accent)}
